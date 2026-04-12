@@ -1,0 +1,40 @@
+# BÀI 3 - MODULE CẬP NHẬT MÓN ĂN
+
+## 1. Luồng dữ liệu
+
+1. Người dùng click "Chỉnh sửa"
+2. Gửi request /bai3/edit/{id}
+3. Controller nhận id
+4. Service tìm Dish
+5. Nếu tồn tại → gửi sang View edit
+6. Nếu không → quay về danh sách + thông báo lỗi
+
+---
+
+## 2. Binding dữ liệu
+
+- th:object để bind object
+- th:field để bind input
+- dữ liệu tự động hiển thị lên form
+
+---
+
+## 3. URL động
+
+- Sử dụng @{|...|} để tạo URL chứa id
+
+---
+
+## 4. Xử lý lỗi
+
+- Nếu id không tồn tại:
+  → hiển thị thông báo
+  → quay về danh sách
+
+---
+
+## 5. Kết quả
+
+- Form hiển thị đúng dữ liệu
+- Có thể chỉnh sửa
+- Không lỗi khi nhập id sai

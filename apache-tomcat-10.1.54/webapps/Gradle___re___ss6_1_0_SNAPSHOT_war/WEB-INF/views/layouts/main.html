@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <title layout:title-pattern="$CONTENT_TITLE - Book Management">Book Management</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fb;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      background: #1e3a8a;
+      color: white;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding: 16px;
+      text-align: center;
+      background: #e5e7eb;
+      border-radius: 8px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    table, th, td {
+      border: 1px solid #d1d5db;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #2563eb;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .highlight {
+      background-color: #fff3cd !important;
+      font-weight: bold;
+      color: #b45309;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .detail-box {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 20px;
+      background: #f9fafb;
+      margin-top: 20px;
+    }
+
+    .detail-box p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 18px;
+    }
+
+    .not-found {
+      color: red;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div th:replace="~{fragments/header :: header(${pageTitle})}"></div>
+
+  <div layout:fragment="content"></div>
+
+  <div th:replace="~{fragments/footer :: footer}"></div>
+</div>
+</body>
+</html>

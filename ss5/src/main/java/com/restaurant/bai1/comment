@@ -1,0 +1,38 @@
+# BÀI 1 - PHÁ ÁN LỖI KẾT XUẤT GIAO DIỆN
+
+## 1. Lỗi phát hiện
+
+### Lỗi 1: Sai thư mục template
+- Cấu hình sai: /WEB-INF/views
+- Đúng: /WEB-INF/templates/
+
+### Lỗi 2: Sai định dạng file
+- Sai: .jsp
+- Đúng: .html
+
+### Lỗi 3: Thiếu TemplateMode
+- Thiếu: resolver.setTemplateMode("HTML")
+
+---
+
+## 2. Nguyên nhân
+
+Do cấu hình Thymeleaf nhưng vẫn dùng logic của JSP,
+khiến hệ thống không render được giao diện.
+
+---
+
+## 3. Cách khắc phục
+
+- Đổi prefix → /WEB-INF/templates/
+- Đổi suffix → .html
+- Thêm TemplateMode
+- Cấu hình đầy đủ TemplateEngine + ViewResolver
+
+---
+
+## 4. Kết quả
+
+- Ứng dụng chạy thành công
+- Truy cập /home hiển thị giao diện HTML
+- Không còn lỗi 500

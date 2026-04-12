@@ -13,6 +13,7 @@
 </head>
 <body>
 <h1>Danh sách sản phẩm</h1>
+<a href="/products."></a>
 <table border="10" cellspacing="20" cellpadding="20">
     <thead>
     <tr>

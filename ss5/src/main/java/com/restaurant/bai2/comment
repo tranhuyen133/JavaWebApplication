@@ -1,0 +1,41 @@
+# BÀI 2 - DANH SÁCH MÓN ĂN ĐỘNG
+
+## 1. Cấu trúc đối tượng Dish
+
+- id: Long
+- name: String
+- price: double
+- isAvailable: boolean
+
+---
+
+## 2. Luồng xử lý
+
+1. Người dùng truy cập /bai2/dishes
+2. Controller gọi DishService
+3. Service trả về List<Dish>
+4. Controller đưa vào Model
+5. Thymeleaf hiển thị ra giao diện
+
+---
+
+## 3. Xử lý hiển thị
+
+- Dùng th:each để lặp danh sách
+- Dùng toán tử điều kiện để hiển thị trạng thái
+- Nếu hết hàng → đổi màu đỏ
+
+---
+
+## 4. Xử lý danh sách rỗng
+
+- Kiểm tra null hoặc empty
+- Hiển thị thông báo thay vì bảng
+
+---
+
+## 5. Kết quả
+
+- Hiển thị danh sách món ăn
+- Món hết hàng có màu đỏ
+- Không lỗi khi danh sách rỗng
